@@ -35,14 +35,19 @@ function onInpute(e) {
   Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
 return; 
 } else if (country.length === 1) {
-
+  
   const aboutCountries = country.map(({name, capital, population, flags, languages}) => {
+    let lang = ''
+    for (let key in languages) {
+      lang = languages[key];
+  }
     return `
+
     <div class="country-info">
-    <ul class="country-list"><li><img src="${flags.svg}" alt="flag" width='20' height ='15' >${name.official}</li></ul>
+    <ul class="country-list"><li class="country-name"><img src="${flags.svg}" alt="flag" width='20' height ='15' >${name.official}</li></ul>
     <p>Сapital: ${capital}</p>
     <p>Population: ${population}</p>
-    <p>Languages: ${languages}</p>
+    <p>Languages: ${lang}</p>
     </div>
     `;
   }).join("")
