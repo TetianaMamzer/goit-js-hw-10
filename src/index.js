@@ -50,7 +50,7 @@ return;
     <p>Languages: ${lang}</p>
     </div>
     `;
-  }).join("")
+  }).join("");
   refs.info.insertAdjacentHTML('beforeend', aboutCountries);
   return;
  } else {
