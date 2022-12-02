@@ -31,19 +31,18 @@ function onInpute(e) {
   clearInput();
   console.log(country)
  if (country.length >= 11) {
-
+  clearInput();
   Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
 return; 
 } else if (country.length === 1) {
-  
+  clearInput();
   const aboutCountries = country.map(({name, capital, population, flags, languages}) => {
     let lang = ''
     for (let key in languages) {
       lang = languages[key];
   }
     return `
-
-    <div class="country-info">
+    <div class="country-info-name">
     <ul class="country-list"><li class="country-name"><img src="${flags.svg}" alt="flag" width='20' height ='15' >${name.official}</li></ul>
     <p>Сapital: ${capital}</p>
     <p>Population: ${population}</p>
@@ -51,10 +50,11 @@ return;
     </div>
     `;
   }).join("");
+  console.log(aboutCountries)
   refs.info.insertAdjacentHTML('beforeend', aboutCountries);
   return;
  } else {
-
+  clearInput();
   const listName = country.map(({name, flags}) => {
     return `
     <li><img src="${flags.svg}" alt="flag" width='20' height ='15' >${name.official}</li>
