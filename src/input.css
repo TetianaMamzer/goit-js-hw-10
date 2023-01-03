@@ -80,24 +80,3 @@ body {
     border-color: var(--primary-text-color);
 }
 
-.button-input {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  background-color: transparent;
-  border: none;
-  color: var(--primary-text-color);
-}
-
-.svg-link {
-  color: var(--primary-text-color);
-}
-
-.find {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  fill: currentColor;
-}
