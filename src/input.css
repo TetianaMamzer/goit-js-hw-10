@@ -74,7 +74,7 @@ body {
 }
 
 .input-position:focus + .film-input,
-.input-position:not(:placeholder-shown) + .film-input {
+.input-position:placeholder-shown + .film-input {
   transform: translateY(-20px);
 }
 
