@@ -63,16 +63,17 @@ body {
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-position:hover + .film-input {
-  color: var(--primary-text-color);
-}
-.input-position:hover,
-.input-position:focus,
-.input-position:not(:placeholder-shown) {
+
+.transform > input:hover,
+.transform > input:focus,
+.transform > input:not(:placeholder-shown) {
   border-bottom: 1px solid var(--primary-text-color);
 }
-.input-position:focus + .film-input, 
-.input-position:not(:placeholder-shown) + .film-input {
+.transform > input:hover + .film-input {
+  color: var(--primary-text-color);
+}
+.transform > input:focus + .film-input, 
+.transform > input:not(:placeholder-shown) + .film-input {
 
   color: var(--primary-text-color);
   transform: translateY(-20px);
